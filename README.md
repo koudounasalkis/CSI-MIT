@@ -1,5 +1,5 @@
 # Bias Mitigation with CSIs
-This repo contains the code for "Enhancing Speech Model Performance and Bias Mitigation via a Subgroup-Based Privacy Preserving Data Selection Strategy", submitted at InterSpeech 2024.
+This repo contains the code for "Enhancing Speech Model Performance and Bias Mitigation via a Subgroup-Based Privacy Preserving Data Selection Strategy", submitted at SLT 2024.
 
 In this repository, you will find the code to replicate our experiments.  
 We do not include the datasets used in the paper as they are publicly available: [FSC](https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/) and [ITALIC](https://huggingface.co/datasets/RiTA-nlp/ITALIC) for the Intent Classification (IC) task, and [LibriSpeech](https://huggingface.co/datasets/librispeech_asr) for the Automatic Speech Recognition (ASR) task.
