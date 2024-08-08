@@ -64,5 +64,40 @@ This approach represents the oracle for the CM-based baseline.
 *Metadata-based oracle*. We adopt the approach proposed in [Koudounas et al., ICASSP 2024](https://ieeexplore.ieee.org/document/10446326), which assumes access to metadata, demographic information included, for the samples in the held-out set that are to be acquired.
 This approach represents the oracle for our proposal since, in our work, we use the CSI to predict the challenging subgroups without accessing metadata.
 
+## Results on ITALIC dataset
+
+| K  | # Samples Added | Model                | Intent Error Rate (%) ⭣ | F1 Macro (%) ⭡ | Intent Error Rate on top-K Subgroups (%) ⭣ |
+| -- | --------------- | -------------------- | ----------------------- | -------------- | ------------------------------------------ |
+| \- | \-              | original             | 26.21 ± 0.32            | 68.08 ± 0.37   | 72.15 ± 0.42 (K = 2)                       |
+| 2  | 725             | w/ random            | 23.95 ± 0.14            | 72.20 ± 0.19   | 70.76 ± 0.58                               |
+|    |                 | w/ KNN               | 23.44 ± 0.06            | 72.65 ± 0.08   | 69.13 ± 0.49                               |
+|    |                 | w/ erroneous samples | 22.86 ± 0.09            | 72.84 ± 0.12   | 70.17 ± 0.31                               |
+|    |                 | w/ clustering [1]    | 22.98 ± 0.14            | 71.92 ± 0.13   | 68.05 ± 0.73                               |
+|    |                 | w/ CM                | 23.70 ± 0.11            | 71.96 ± 0.08   | 67.41 ± 0.64                               |
+|    |                 | w/ CSI               | 21.94 ± 0.10            | 72.87 ± 0.11   | 59.98 ± 0.59                               |
+|    |                 | w/ DivExplorer [2]   | 21.12 ± 0.12            | 72.94 ± 0.10   | 58.17 ± 0.45                               |
+| \- | 2625            |                      | 24.29 ± 0.36            | 73.22 ± 0.33   | 65.91 ± 0.34 (K = 2)                       |
+| 3  | 975             | w/ random            | 24.02 ± 0.16            | 72.01 ± 0.17   | 66.14 ± 0.64                               |
+|    |                 | w/ KNN               | 23.59 ± 0.05            | 71.26 ± 0.09   | 56.83 ± 0.38                               |
+|    |                 | w/ erroneous samples | 22.99 ± 0.12            | 71.77 ± 0.10   | 57.51 ± 0.42                               |
+|    |                 | w/ clustering [1]    | 23.17 ± 0.09            | 71.69 ± 0.08   | 56.71 ± 0.39                               |
+|    |                 | w/ CM                | 23.75 ± 0.04            | 71.88 ± 0.03   | 57.15 ± 0.55                               |
+|    |                 | w/ CSI               | 22.50 ± 0.06            | 72.66 ± 0.04   | 51.09 ± 0.44                               |
+|    |                 | w/ DivExplorer [2]   | 21.74 ± 0.08            | 73.15 ± 0.08   | 50.98 ± 0.38                               |
+| 4  | 1395            | w/ random            | 23.01 ± 0.11            | 72.61 ± 0.15   | 63.94 ± 0.57                               |
+|    |                 | w/ KNN               | 22.81 ± 0.04            | 72.48 ± 0.05   | 55.12 ± 0.37                               |
+|    |                 | w/ erroneous samples | 22.54 ± 0.07            | 72.79 ± 0.04   | 61.02 ± 0.58                               |
+|    |                 | w/ clustering [1]    | 22.35 ± 0.08            | 72.78 ± 0.06   | 55.04 ± 0.29                               |
+|    |                 | w/ CM                | 22.69 ± 0.05            | 72.66 ± 0.06   | 55.61 ± 0.41                               |
+|    |                 | w/ CSI               | 22.05 ± 0.02            | 72.86 ± 0.03   | 49.25 ± 0.43                               |
+|    |                 | w/ DivExplorer [2]   | 21.69 ± 0.03            | 73.24 ± 0.04   | 47.16 ± 0.19                               |
+| 5  | 1509            | w/ random            | 23.59 ± 0.15            | 72.26 ± 0.17   | 58.49 ± 0.71                               |
+|    |                 | w/ KNN               | 23.09 ± 0.04            | 72.04 ± 0.04   | 48.15 ± 0.48                               |
+|    |                 | w/ erroneous samples | 22.56 ± 0.03            | 72.85 ± 0.05   | 60.56 ± 0.19                               |
+|    |                 | w/ clustering [1]    | 22.19 ± 0.02            | 72.85 ± 0.03   | 50.71 ± 0.22                               |
+|    |                 | w/ CM                | 23.10 ± 0.05            | 71.99 ± 0.04   | 49.74 ± 0.43                               |
+|    |                 | w/ CSI               | 22.14 ± 0.01            | 72.30 ± 0.03   | 42.19 ± 0.39                               |
+|    |                 | w/ DivExplorer [2]   | 21.95 ± 0.04            | 72.99 ± 0.05   | 41.88 ± 0.21                               |
+| \- | 2625            | w/ all data          | 24.29 ± 0.36            | 73.22 ± 0.33   | 58.44 ± 0.37 (K = 5)                       |
 ## License
 This code is released under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more details.
