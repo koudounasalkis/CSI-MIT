@@ -65,6 +65,7 @@ This approach represents the oracle for the CM-based baseline.
 This approach represents the oracle for our proposal since, in our work, we use the CSI to predict the challenging subgroups without accessing metadata.
 
 ## Results on ITALIC dataset
+Here you can find a table summarizing the results obtained on the *ITALIC* dataset, corresponding to Figure 2 in the paper.
 
 | K  | # Samples Added | Model                | Intent Error Rate (%) ⭣ | F1 Macro (%) ⭡ | Intent Error Rate on top-K Subgroups (%) ⭣ |
 | -- | --------------- | -------------------- | ----------------------- | -------------- | ------------------------------------------ |
