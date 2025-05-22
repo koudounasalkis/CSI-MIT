@@ -1,5 +1,5 @@
 # Privacy Preserving Data Selection for Bias Mitigation in Speech Models
-[![paper](https://img.shields.io/badge/paper-OpenReview-blue)]()
+[![paper](https://img.shields.io/badge/paper-OpenReview-blue)](https://openreview.net/pdf?id=UGViDDIXKd)
 
 This repo contains the code for "Privacy Preserving Data Selection for Bias Mitigation in Speech Models", accepted at ACL 2025 (Industry Track).
 
